@@ -3,8 +3,9 @@ Mini game to phone.
 
 _Version Unity: 2019.4.18f1._
 
-![Creen](https://user-images.githubusercontent.com/55539313/107515158-b5ea0000-6bbb-11eb-80d1-e15b2835c6cd.png)
+![Creen](https://user-images.githubusercontent.com/55539313/107515158-b5ea0000-6bbb-11eb-80d1-e15b2835c6cd.png =100x20)
 
+----
 
 ## Install
 
