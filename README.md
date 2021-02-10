@@ -4,7 +4,7 @@ Mini game to phone.
 _Version Unity: 2019.4.18f1._
 
 
-<img src="https://user-images.githubusercontent.com/55539313/107515158-b5ea0000-6bbb-11eb-80d1-e15b2835c6cd.png" width="120" height="200" />
+<img src="https://user-images.githubusercontent.com/55539313/107515158-b5ea0000-6bbb-11eb-80d1-e15b2835c6cd.png" width="200" height="250" />
 
 ----
 
