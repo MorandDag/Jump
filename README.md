@@ -14,4 +14,4 @@ _Version Unity: 2019.4.18f1._
 
 
 ## Link to the build version
-Google drive: https://drive.google.com/drive/u/0/folders/1ad42RErKXaoTmUOaaFo6fXJdfT47ucuc
+Google drive: https://drive.google.com/drive/folders/1ad42RErKXaoTmUOaaFo6fXJdfT47ucuc?usp=sharing
