@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
+    public TextRestart text;
+
     public float speed = 10f;
     public bool death = false;
     public Animator animator;
@@ -12,14 +14,12 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     public LevelGenerator levSet;
     float movement = 0f;
-    // Start is called before the first frame update
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         //movement = Input.GetAxis("Horizontal") * speed;

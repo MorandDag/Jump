@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    public int type;
     public float jumpForce = 10f;
     public int numPlatform = 0;
     void OnCollisionEnter2D(Collision2D col)
@@ -21,9 +22,11 @@ public class Platform : MonoBehaviour
 
                 if(TextPoints.points < numPlatform)
                     TextPoints.points = numPlatform;
+
+                if (type == 1)
+                    Destroy(this.gameObject);
             }
         }
-        
     }
     
 }

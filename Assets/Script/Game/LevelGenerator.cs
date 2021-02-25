@@ -6,7 +6,8 @@ public class LevelGenerator : MonoBehaviour
 {
     public static bool deathPlayer = false;
 
-    public GameObject platform, mainCamera, player, restartMenu, pointsMenu;
+    public GameObject[] platform;
+    public GameObject mainCamera, player, restartMenu, pointsMenu;
     public Transform spaceForPlatforms, gameSpace;
 
     public int numberOfPlatform;
@@ -40,15 +41,47 @@ public class LevelGenerator : MonoBehaviour
     public void CreateLevel()
     {
         levelWidth = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x - .5f;
-
+        bool specialPlatforfm = false;
         
         for (int i = TextPoints.points + pointPlus; i < numberOfPlatform; i++)
         {
+            int typePlatform = Random.Range(0, 100);
+
+            if (!specialPlatforfm)
+            {
+                if (typePlatform >= 0 && typePlatform < 50)
+                {
+                    typePlatform = 0;
+                }
+                else if (typePlatform >= 51 && typePlatform < 90)
+                {
+                    typePlatform = 1;
+                    specialPlatforfm = true;
+                }
+                else if (typePlatform >= 91 && typePlatform < 100)
+                {
+                    typePlatform = 2;
+                    specialPlatforfm = true;
+                }
+                else
+                {
+                    typePlatform = 0;
+                }
+            }
+            else
+            {
+                typePlatform = 0;
+                specialPlatforfm = false;
+            }
+                
+            
+
             spawnPosition.y += Random.Range(minY, maxY);
             spawnPosition.x = Random.Range(-levelWidth, levelWidth);
-            GameObject newPlatform = Instantiate(platform, spawnPosition, Quaternion.identity) as GameObject;
+            GameObject newPlatform = Instantiate(platform[typePlatform], spawnPosition, Quaternion.identity) as GameObject;
             newPlatform.transform.parent = spaceForPlatforms;
             newPlatform.GetComponent<Platform>().numPlatform = i+1;
+            newPlatform.GetComponent<Platform>().type = typePlatform;
         }
     }
 
